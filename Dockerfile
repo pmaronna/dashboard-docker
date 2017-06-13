@@ -32,6 +32,9 @@ RUN mkdir -p /srv/ui/
 RUN mkdir -p /srv/services/
 RUN mkdir -p /etc/shiny-server/
 
+COPY shiny-server.conf  /etc/shiny-server/shiny-server.conf
+COPY shiny-server.sh /usr/bin/shiny-server.sh
+
 EXPOSE 80
 
 CMD ["/usr/bin/shiny-server.sh"]
